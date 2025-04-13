@@ -4,6 +4,10 @@
         "https://github.com/jax-explorer/ComfyUI-easycontrol": {
             "hash": "fd6f1ada63587d0f1650fc78d9349d8819213cee",
             "disabled": false
+        },
+        "https://github.com/tsogzark/ComfyUI-load-image-from-url": {
+            "hash": "e4cb29076e7f10c00ccdef34b5fa6cbc",
+            "disabled": false
         }
     },
     "cnr_custom_nodes": {
