@@ -69,6 +69,16 @@ WORKDIR /comfyui
 # Create necessary directories
 RUN mkdir -p models/checkpoints models/vae
 
+# [Custom] Download checkpoints/vae/LoRA to include in image based on model type
+RUN wget -O models/loras/Ghibli.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/Ghibli.safetensors
+RUN wget -O models/loras/canny.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/canny.safetensors
+RUN wget -O models/loras/depth.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/depth.safetensors
+RUN wget -O models/loras/hedsketch.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/hedsketch.safetensors
+RUN wget -O models/loras/inpainting.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/inpainting.safetensors
+RUN wget -O models/loras/pose.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/pose.safetensors
+RUN wget -O models/loras/seg.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/seg.safetensors
+RUN wget -O models/loras/subject.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/subject.safetensors
+
 # Download checkpoints/vae/LoRA to include in image based on model type
 RUN if [ "$MODEL_TYPE" = "sdxl" ]; then \
       wget -O models/checkpoints/sd_xl_base_1.0.safetensors https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors && \
