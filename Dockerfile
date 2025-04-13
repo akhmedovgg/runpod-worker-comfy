@@ -35,6 +35,9 @@ WORKDIR /comfyui
 # Install runpod
 RUN pip install runpod requests
 
+# [Custom] Install bitsandbytes
+RUN pip install bitsandbytes
+
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
 
