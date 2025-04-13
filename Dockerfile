@@ -27,7 +27,7 @@ RUN apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 RUN pip install comfy-cli
 
 # Install ComfyUI
-RUN /usr/bin/yes | comfy --workspace /comfyui install --cuda-version 11.8 --nvidia --version 0.3.26
+RUN /usr/bin/yes | comfy --workspace /comfyui install --cuda-version 12.4 --nvidia --version 0.3.26
 
 # Change working directory to ComfyUI
 WORKDIR /comfyui
@@ -67,7 +67,7 @@ ARG MODEL_TYPE
 WORKDIR /comfyui
 
 # Create necessary directories
-RUN mkdir -p models/checkpoints models/vae
+RUN mkdir -p models/checkpoints models/vae models/loras
 
 # [Custom] Download checkpoints/vae/LoRA to include in image based on model type
 RUN wget -O models/loras/Ghibli.safetensors https://huggingface.co/Xiaojiu-Z/EasyControl/resolve/main/models/Ghibli.safetensors

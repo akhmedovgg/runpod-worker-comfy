@@ -1,10 +1,6 @@
 {
     "comfyui": "22ad513c72b891322f7baf6b459aa41858087b3b",
     "git_custom_nodes": {
-        "https://github.com/ltdrdata/ComfyUI-Manager": {
-            "hash": "50fc1389b0184d93765aefbbc4186fcdac96bdf9",
-            "disabled": false
-        },
         "https://github.com/jax-explorer/ComfyUI-easycontrol": {
             "hash": "fd6f1ada63587d0f1650fc78d9349d8819213cee",
             "disabled": false
